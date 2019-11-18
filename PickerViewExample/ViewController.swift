@@ -14,9 +14,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // the array used to populate the picker view
     var teas = ["Earl Gray", "Oolong", "Peppermint", "Chamomille", "English Breakfast", "Chai", "Lemongrass"]
     var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         // delegate and data source, from the protocols above, are assigned to self - i.e. this ViewController class
         teaSelector.delegate = self
@@ -42,6 +42,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedTea.text = teas[row]
     }
+    
 
     // needed only for the delegation and data source assignment above
     @IBOutlet weak var teaSelector: UIPickerView!
